@@ -22,14 +22,14 @@ function App() {
 
   useEffect(()=>{
     localStorage.setItem('cart', JSON.stringify(cart))
-    
-    // Crea un temporizador para eliminar los datos después de 10 segundos
-    const timer = setTimeout(() => {
-        localStorage.removeItem('cart');
-    }, 10000); // 10000 milisegundos = 10 segundos
 
-    // Limpia el temporizador si el componente se desmonta o si el carrito cambia
-    return () => clearTimeout(timer);
+    // // Crea un temporizador para eliminar los datos después de 10 segundos
+    // const timer = setTimeout(() => {
+    //     localStorage.removeItem('cart');
+    // }, 10000); // 10000 milisegundos = 10 segundos
+
+    // // Limpia el temporizador si el componente se desmonta o si el carrito cambia
+    // return () => clearTimeout(timer);
   }, [cart])
   
 
